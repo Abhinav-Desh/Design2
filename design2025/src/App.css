@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid #8e7861;
+}
+.Navbar-content1{
+   display: flex;
+   font-weight: 600;
+   align-items: center;
+}
+.Navbar-content2{
+    display: flex;
+    width: 60%;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+    justify-content: space-around;
+}
