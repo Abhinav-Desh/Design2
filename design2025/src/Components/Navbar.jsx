@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Navbar = () => {
   const navElement = ['HOME', 'PAGES', 'PORTFOLIO', 'BLOG', 'SHOP'];
+  const [activeIndex,setActiveIndex] = useState(0);
 
+  const handleIndex = (index)=>{
+    setActiveIndex(index);
+  }
   return (
     <div className="Navbar-container">
       <div className="Navbar-content1">
@@ -28,7 +32,8 @@ const Navbar = () => {
           return (
             <div
               key={index}
-              className={`naveffect ${ele.toLowerCase()}`} 
+              className={`naveffect ${ele.toLowerCase()} ${index === activeIndex?'active':''} `} 
+              onClick={()=>handleIndex(index)}
               style={{
                 color: '#8e7861',
                 cursor: 'pointer',
@@ -43,7 +48,8 @@ const Navbar = () => {
             </div>
           );
         })}
-      </div>
+     
+    </div>
     </div>
   );
 };
